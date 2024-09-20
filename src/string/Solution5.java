@@ -14,6 +14,7 @@ public class Solution5 {
             }
         }
         String reversed = new StringBuilder(copy).reverse().toString();
+        System.out.println(reversed);
         if(reversed.equals(copy)) {
             System.out.println("YES");
         }
