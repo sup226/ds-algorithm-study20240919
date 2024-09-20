@@ -15,8 +15,13 @@ public class Solution8 {
 
         for (int i = 0; i < num; i++) {
             String str_substring = str.substring(i*7, i*7+7);
+            str_substring = str_substring.replace('#', '1');
+            str_substring = str_substring.replace('*', '0');
             char key = (char) Integer.parseInt(str_substring,2);
             System.out.print(key);
         }
+
+        sc.close();
+        code.close();
     }
 }
