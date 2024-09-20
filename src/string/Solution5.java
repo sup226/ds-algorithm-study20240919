@@ -7,15 +7,15 @@ public class Solution5 {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         str = str.toLowerCase();
-        String copy = "";
+        StringBuilder copy = new StringBuilder();
         for (int i = 0; i < str.length(); i++) {
             if(Character.isLetter(str.charAt(i))) {
-                copy += str.charAt(i);
+                copy.append(str.charAt(i));
             }
         }
-        String reversed = new StringBuilder(copy).reverse().toString();
+        String reversed = new StringBuilder(copy.toString()).reverse().toString();
         System.out.println(reversed);
-        if(reversed.equals(copy)) {
+        if(reversed.contentEquals(copy)) {
             System.out.println("YES");
         }
         else {
